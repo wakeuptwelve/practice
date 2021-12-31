@@ -11,10 +11,10 @@
     * pclass, name, sex, embarked 피쳐는 target encoding<br />
 * Model : RandomForest를 활용<br />
 
-2. House Prices<br />
-(1) 사용된 data set : kaggle의 집값 예측 데이터<br />
-(2) preprocessing<br />
-  (가) 결측값은 데이터 누락으로 발생하였다고 가정하고 data_description.txt 파일을 통해 누락된 값으로 처리.<br />
+* House Prices<br />
+ * 사용된 data set : kaggle의 집값 예측 데이터<br />
+ * preprocessing<br />
+  * 결측값은 데이터 누락으로 발생하였다고 가정하고 data_description.txt 파일을 통해 누락된 값으로 처리.<br />
   몇몇 feature들은 중간값이나 최소값 등으로 대체<br />
   (나) outlier는 feature와 target간의 scatter plot을 직접 보고 제거<br />
   (다) feature들을 조합하여 새로운 feature 생성<br />
