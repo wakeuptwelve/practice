@@ -1,5 +1,5 @@
 # practice
-연습공간
+각 과제 설명
 1. Titanic Survive
 
 
