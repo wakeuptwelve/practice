@@ -11,19 +11,19 @@
     * pclass, name, sex, embarked 피쳐는 target encoding<br />
   * Model : RandomForest를 활용<br />
 
-* House Prices<br />
+## House Prices<br />
  * 사용된 data set : kaggle의 집값 예측 데이터<br />
  * preprocessing<br />
-  * 결측값은 데이터 누락으로 발생하였다고 가정하고 data_description.txt 파일을 통해 누락된 값으로 처리.<br />
+   * 결측값은 데이터 누락으로 발생하였다고 가정하고 data_description.txt 파일을 통해 누락된 값으로 처리.<br />
   몇몇 feature들은 중간값이나 최소값 등으로 대체<br />
-  (나) outlier는 feature와 target간의 scatter plot을 직접 보고 제거<br />
-  (다) feature들을 조합하여 새로운 feature 생성<br />
-  (라) 하나의 값이 지나치게 많은 feature는 해당 열을 삭제<br />
-  (마) 분포가 한쪽으로 치우쳐진 수치형 변수는 log 변환을 수행<br />
-  (바) cardinality가 큰 categorical feature는 target encoding을 적용. 그 외에는 one hot encoding을 적용<br />
-(3) Model : Elastic net과 XGBoost 두개의 모델을 만들고 각 예측값의 weight mean을 계산하여 최종 예측값으로 결정<br />
+   * outlier는 feature와 target간의 scatter plot을 직접 보고 제거<br />
+   * feature들을 조합하여 새로운 feature 생성<br />
+   * 하나의 값이 지나치게 많은 feature는 해당 열을 삭제<br />
+   * 분포가 한쪽으로 치우쳐진 수치형 변수는 log 변환을 수행<br />
+   * cardinality가 큰 categorical feature는 target encoding을 적용. 그 외에는 one hot encoding을 적용<br />
+ * Model : Elastic net과 XGBoost 두개의 모델을 만들고 각 예측값의 weight mean을 계산하여 최종 예측값으로 결정<br />
 
-3. 심장 질환 예측 경진대회<br />
+## 심장 질환 예측 경진대회<br />
 (1) 사용된 data set : DACON BASIC의 심장 질환 예측 데이터를 사용(주소 : https://dacon.io/competitions/official/235848/overview/description)<br />
 (2) Preprocessing<br />
   (가) train data의 target값에 따른 분포의 차이를 시각화<br />
@@ -37,7 +37,7 @@
 그러나 public 점수는 test데이터의 일부만 가지고 평가를 하기에 public 점수만 가지고서 knn이 logistic regression보다 좋은 성능을 낸다고 생각한 것은 잘못된 판단이었다.<br />
 만약 logistic regression을 사용했으면 더 높은 순위를 기록했을 수도 있었을 것이라 생각한다.<br />
 
-4. HAM10000 데이터(XGB, CNN 사용)<br />
+## HAM10000 데이터(XGB, CNN 사용)<br />
 (1) 사용된 data set : Skin Cancer MNIST: HAM10000<br />
   데이터 설명 :  https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000 참조<br />
   데이터 구성 : 피부병 image 데이터와 각 이미지에 대한 metadata로 구성<br />
