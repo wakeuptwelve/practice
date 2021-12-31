@@ -4,12 +4,12 @@
   * 사용된 data set : kaggle의 타이타닉 생존자 예측 데이터<br />
   * Preprocessing<br />
     * 동행자의 수를 합쳐서 새로운 특징값 생성<br />
-  (나) 혼자 탑승한 사람을 따로 분류하여 특징값 생성<br />
-  (다) Age 피쳐의 결측값은 이름의 호칭(miss, mr, mrs, other)을 활용. 각 호칭 별 age값의 평균값으로 결측값을 채움<br />
-  (라) 나머지 결측값은 각 피쳐의 최빈값, 중앙값으로 대체<br />
-  (마) Age와 Fare 피쳐는 구간화한 후 라벨인코딩<br />
-  (바) pclass, name, sex, embarked 피쳐는 target encoding<br />
-(3) Model : RandomForest를 활용<br />
+    * 혼자 탑승한 사람을 따로 분류하여 특징값 생성<br />
+    * Age 피쳐의 결측값은 이름의 호칭(miss, mr, mrs, other)을 활용. 각 호칭 별 age값의 평균값으로 결측값을 채움<br />
+    * 나머지 결측값은 각 피쳐의 최빈값, 중앙값으로 대체<br />
+    * Age와 Fare 피쳐는 구간화한 후 라벨인코딩<br />
+    * pclass, name, sex, embarked 피쳐는 target encoding<br />
+* Model : RandomForest를 활용<br />
 
 2. House Prices<br />
 (1) 사용된 data set : kaggle의 집값 예측 데이터<br />
