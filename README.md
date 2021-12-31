@@ -24,15 +24,15 @@
  * Model : Elastic net과 XGBoost 두개의 모델을 만들고 각 예측값의 weight mean을 계산하여 최종 예측값으로 결정<br />
 
 ## 심장 질환 예측 경진대회<br />
-(1) 사용된 data set : DACON BASIC의 심장 질환 예측 데이터를 사용(주소 : https://dacon.io/competitions/official/235848/overview/description)<br />
-(2) Preprocessing<br />
-  (가) train data의 target값에 따른 분포의 차이를 시각화<br />
-  (나) target값에 따른 분포의 차이를 보고 이를 통해 각 feature들을 구간으로 나눈 feature들을 생성<br />
-  (다) 수치형 변수는 log변환 수행<br />
-(3) Dimension reduction : PCA를 적용하여 차원축소<br />
-(4) Model : KNN을 활용하였고 GridsearchCV를 활용하여 적절한 hyperparameter를 찾음<br />
-(5) 결과 : Public(7등, score : 0.93939), Private(13등, score : 0.86)<br />
-(6) 후기 : train data만 가지고 여러 모델에 적용했을 때에는 logistic regression이 knn보다 더 좋은 점수를 기록하였다<br />
+* 사용된 data set : DACON BASIC의 심장 질환 예측 데이터를 사용(주소 : https://dacon.io/competitions/official/235848/overview/description)<br />
+* Preprocessing<br />
+  * train data의 target값에 따른 분포의 차이를 시각화<br />
+  * target값에 따른 분포의 차이를 보고 이를 통해 각 feature들을 구간으로 나눈 feature들을 생성<br />
+  * 수치형 변수는 log변환 수행<br />
+* Dimension reduction : PCA를 적용하여 차원축소<br />
+* Model : KNN을 활용하였고 GridsearchCV를 활용하여 적절한 hyperparameter를 찾음<br />
+* 결과 : Public(7등, score : 0.93939), Private(13등, score : 0.86)<br />
+* 후기 : train data만 가지고 여러 모델에 적용했을 때에는 logistic regression이 knn보다 더 좋은 점수를 기록하였다<br />
 하지만 public점수는 logistic regression보다 knn이 더 좋은 점수를 기록했기에 이를 선택하였다. <br />
 그러나 public 점수는 test데이터의 일부만 가지고 평가를 하기에 public 점수만 가지고서 knn이 logistic regression보다 좋은 성능을 낸다고 생각한 것은 잘못된 판단이었다.<br />
 만약 logistic regression을 사용했으면 더 높은 순위를 기록했을 수도 있었을 것이라 생각한다.<br />
