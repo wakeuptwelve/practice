@@ -9,7 +9,7 @@
     * 나머지 결측값은 각 피쳐의 최빈값, 중앙값으로 대체<br />
     * Age와 Fare 피쳐는 구간화한 후 라벨인코딩<br />
     * pclass, name, sex, embarked 피쳐는 target encoding<br />
-* Model : RandomForest를 활용<br />
+  * Model : RandomForest를 활용<br />
 
 * House Prices<br />
  * 사용된 data set : kaggle의 집값 예측 데이터<br />
