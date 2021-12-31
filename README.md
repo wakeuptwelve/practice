@@ -1,6 +1,6 @@
 # practice
 각 과제 설명<br />
-* 1. Titanic Survive<br />
+*Titanic Survive<br />
   * (1) 사용된 data set : kaggle의 타이타닉 생존자 예측 데이터<br />
   * (2) Preprocessing<br />
   (가) 동행자의 수를 합쳐서 새로운 특징값 생성<br />
