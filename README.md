@@ -38,11 +38,11 @@
 만약 logistic regression을 사용했으면 더 높은 순위를 기록했을 수도 있었을 것이라 생각한다.
 
 4. HAM10000 데이터(XGB, CNN 사용)
-1. 사용된 data set : Skin Cancer MNIST: HAM10000
+(1) 사용된 data set : Skin Cancer MNIST: HAM10000
   데이터 설명 :  https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000 참조
   데이터 구성 : 피부병 image 데이터와 각 이미지에 대한 metadata로 구성
   목표 : 피부병 진단(data set에서 dx값을 예측)
-2. EDA 및 전처리
+(2) EDA 및 전처리
   (가) target 값의 분포는 균등하지 않음(imbalanced data)
   (나) 환자의 정보가 있는 metadata를 통해 EDA실시
   (다) 각 feature값에 따라 target값의 분포가 조금씩 차이를 보이므로 metedata를 활용한 예측도 가능할 것으로 추측
@@ -50,9 +50,9 @@
   (마) metadata에 이미지 정보를 추가하기 위해 각 이미지의 RGB채널과 Gray채널의 평균,최대,최소,표준편차 값을 추가
   (바) class가 불균형하므로 이미지 데이터는 data augmentaion을 적용. class가 더 적은 쪽에 더 많은 augmentation을 적용하여 더 많은 데이터를 확보
   (사) 원본 이미지 파일은 크기가 너무 크므로(600x450) 학습에는 이를 축소하여(50x50) 사용.
-3. Model : metadata에는 XGBoost를 적용. 이미지 데이터는 CNN을 적용
-4. 결과 : XGBoost는 accuracy 0.79, F1-macro 0.585, CNN은 accuracy 0.76, F1-macro 0.57 기록
-5. 총평 : CNN모델의 경우 data augmentation을 적용하기 전과 적용한 후를 비교하면 accuracy는 크게 향상되지는 않았으나 F1-macro는 적용한 후에 크게 증가하였다.
+(3) Model : metadata에는 XGBoost를 적용. 이미지 데이터는 CNN을 적용
+(4) 결과 : XGBoost는 accuracy 0.79, F1-macro 0.585, CNN은 accuracy 0.76, F1-macro 0.57 기록
+(5) 총평 : CNN모델의 경우 data augmentation을 적용하기 전과 적용한 후를 비교하면 accuracy는 크게 향상되지는 않았으나 F1-macro는 적용한 후에 크게 증가하였다.
 질병을 판단하는데 있어서 환자의 metadata는 예측에 큰 도움을 줄 수 있다.
 이를 활용하여 metadata와 image 데이터, 혹은 그 이외의 데이터를 더 수집한 후 여러 모델을 생성하고 voting classifier를 적용하는 것도 고려할 수 있다.
 
