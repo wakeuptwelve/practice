@@ -1,21 +1,21 @@
 # practice
 각 과제 설명
-1. Titanic Survive
-(1) 사용된 data set : kaggle의 타이타닉 생존자 예측 데이터
-(2) Preprocessing
-  (가) 동행자의 수를 합쳐서 새로운 특징값 생성
-  (나) 혼자 탑승한 사람을 따로 분류하여 특징값 생성
-  (다) Age 피쳐의 결측값은 이름의 호칭(miss, mr, mrs, other)을 활용. 각 호칭 별 age값의 평균값으로 결측값을 채움
-  (라) 나머지 결측값은 각 피쳐의 최빈값, 중앙값으로 대체
-  (마) Age와 Fare 피쳐는 구간화한 후 라벨인코딩
-  (바) pclass, name, sex, embarked 피쳐는 target encoding
-(3) Model : RandomForest를 활용
+1. Titanic Survive<br />
+(1) 사용된 data set : kaggle의 타이타닉 생존자 예측 데이터<br />
+(2) Preprocessing<br />
+  (가) 동행자의 수를 합쳐서 새로운 특징값 생성<br />
+  (나) 혼자 탑승한 사람을 따로 분류하여 특징값 생성<br />
+  (다) Age 피쳐의 결측값은 이름의 호칭(miss, mr, mrs, other)을 활용. 각 호칭 별 age값의 평균값으로 결측값을 채움<br />
+  (라) 나머지 결측값은 각 피쳐의 최빈값, 중앙값으로 대체<br />
+  (마) Age와 Fare 피쳐는 구간화한 후 라벨인코딩<br />
+  (바) pclass, name, sex, embarked 피쳐는 target encoding<br />
+(3) Model : RandomForest를 활용<br />
 
-2. House Prices
-(1) 사용된 data set : kaggle의 집값 예측 데이터
-(2) preprocessing
-  (가) 결측값은 데이터 누락으로 발생하였다고 가정하고 data_description.txt 파일을 통해 누락된 값으로 처리.
-  몇몇 feature들은 중간값이나 최소값 등으로 대체
+2. House Prices<br />
+(1) 사용된 data set : kaggle의 집값 예측 데이터<br />
+(2) preprocessing<br />
+  (가) 결측값은 데이터 누락으로 발생하였다고 가정하고 data_description.txt 파일을 통해 누락된 값으로 처리.<br />
+  몇몇 feature들은 중간값이나 최소값 등으로 대체<br />
   (나) outlier는 feature와 target간의 scatter plot을 직접 보고 제거
   (다) feature들을 조합하여 새로운 feature 생성
   (라) 하나의 값이 지나치게 많은 feature는 해당 열을 삭제
