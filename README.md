@@ -50,8 +50,8 @@
   * metadata에 이미지 정보를 추가하기 위해 각 이미지의 RGB채널과 Gray채널의 평균,최대,최소,표준편차 값을 추가<br />
   * class가 불균형하므로 이미지 데이터는 data augmentaion을 적용. class가 더 적은 쪽에 더 많은 augmentation을 적용하여 더 많은 데이터를 확보<br />
   * 원본 이미지 파일은 크기가 너무 크므로(600x450) 학습에는 이를 축소하여(50x50) 사용.<br />
-* Model : metadata에는 XGBoost를 적용. 이미지 데이터는 CNN을 적용<br />
-* 결과 : XGBoost는 accuracy 0.79, F1-macro 0.585, CNN은 accuracy 0.76, F1-macro 0.57 기록<br />
+* Model : metadata에는 XGBoost를 적용. 이미지 데이터는 depthwise separable CNN을 적용<br />
+* 결과 : XGBoost는 accuracy 0.79, F1-macro 0.585, CNN은 accuracy 0.78, F1-macro 0.61 기록<br />
 * 총평 : CNN모델의 경우 data augmentation을 적용하기 전과 적용한 후를 비교하면 accuracy는 크게 향상되지는 않았으나 F1-macro는 적용한 후에 크게 증가하였다.<br />
 질병을 판단하는데 있어서 환자의 metadata는 예측에 큰 도움을 줄 수 있다.<br />
 이를 활용하여 metadata와 image 데이터, 혹은 그 이외의 데이터를 더 수집한 후 여러 모델을 생성하고 voting classifier를 적용하는 것도 고려할 수 있다.<br />
